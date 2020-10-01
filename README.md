@@ -6,7 +6,7 @@
 
 I wanted a modern clean and dark theme for MantisBT. 
 
-Based on https://github.com/Tagirijus/MantisBTDarkTheme
+Based on https://github.com/iKyzu/MantisBTModernDarkTheme
 
 Edited from https://github.com/polnetwork/MantisBTModernTheme
 

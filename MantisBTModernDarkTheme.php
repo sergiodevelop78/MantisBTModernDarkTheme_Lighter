@@ -1,31 +1,59 @@
 <?php
 
-class MantisBTModernDarkThemePlugin extends MantisPlugin {
+class MantisBTModernDarkThemePlugin
+extends MantisPlugin
+{
+	const CFG_ENABLED = 'DarkMode_enabled';
 
-  function register() {
-    $this->name        = 'MantisBT Modern Dark Theme';
-    $this->description = 'A clean and dark theme for MantisBT.';
+	function register()
+	{
+		$this->name = 'MantisBT Modern Dark Theme';
+		$this->description = 'A clean and dark theme for MantisBT.';
 
-    $this->version     = '1.0.1';
-    $this->requires    = array(
-      'MantisCore'       => '2.0.0',
-    );
+		$this->version = '2.0.0';
+		$this->requires = array(
+			'MantisCore' => '2.0.0',
+		);
 
-    $this->author      = 'iKyzu';
-    $this->contact     = 'iKyzu@o2.pl';
-	$this->url         = 'https://github.com/iKyzu';
-  }
+		$this->author = 'Simone Tellini';
+		$this->url = 'https://github.com/wiz78/MantisBTModernDarkTheme';
+	}
 
-  function hooks() {
-    return array(
-        'EVENT_LAYOUT_RESOURCES' => 'add_css'
-    );
-  }
+	function hooks()
+	{
+		return array(
+			'EVENT_LAYOUT_RESOURCES' => 'add_css',
 
-  function add_css($p_event) {
-      echo '<link rel="stylesheet" type="text/css" href="' . plugin_file('ModernDarkTheme.css') . '" />' . "\n";
-      echo '<link rel="stylesheet" type="text/css" href="' . plugin_file('fonts/css/ibm-plex.min.css') . '" />' . "\n";
+			'EVENT_ACCOUNT_PREF_UPDATE_FORM' => 'account_update_form',
+			'EVENT_ACCOUNT_PREF_UPDATE' => 'account_update',
+		);
+	}
 
-  }
+	function add_css( $p_event )
+	{
+		if( $this->is_enabled() )
+			echo '<link rel="stylesheet" type="text/css" href="' . plugin_file( 'ModernDarkTheme.css' ) . '" />' . "\n";
+	}
 
+	function is_enabled()
+	{
+		return config_get( self::CFG_ENABLED, false, auth_get_current_user_id(), ALL_PROJECTS );;
+	}
+
+	function account_update_form( $p_event, $p_user_id )
+	{
+		echo '<tr>' .
+				 '<td class="category">' .
+					'<label for="DarkModeSwitch">Dark Mode</label>' .
+				 '</td>' .
+				 '<td>' .
+					 '<input id="DarkModeSwitch" type="checkbox" name="DarkMode_enabled" value="1" ' . ( $this->is_enabled() ? 'checked' : '' ) . '/>' .
+				 '</td>' .
+			 '</tr>';
+	}
+
+	function account_update( $p_event, $p_user_id )
+	{
+		config_set( self::CFG_ENABLED, gpc_get_bool( 'DarkMode_enabled', false ), $p_user_id, ALL_PROJECTS );
+	}
 }
