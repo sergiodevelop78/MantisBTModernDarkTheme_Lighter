@@ -25,3 +25,5 @@ $g_status_colors = array( 'new' => '#ffa0a0', # red,
     'resolved' => '#cceedd', # buish-green
     'closed' => '#e8e8e8'); # light gray
 ```
+
+Each user can then enable the dark theme in Account -> Preferences
