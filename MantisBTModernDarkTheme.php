@@ -37,7 +37,7 @@ extends MantisPlugin
 
 	function is_enabled()
 	{
-		return config_get( self::CFG_ENABLED, false, auth_get_current_user_id(), ALL_PROJECTS );;
+		return auth_is_user_authenticated() && config_get( self::CFG_ENABLED, false, auth_get_current_user_id(), ALL_PROJECTS );;
 	}
 
 	function account_update_form( $p_event, $p_user_id )
