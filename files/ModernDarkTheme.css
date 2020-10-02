@@ -683,3 +683,18 @@ a i
 {
 	border-radius: 0 18px 18px 0;
 }
+
+.pager > li > a,
+.pagination > li > a
+{
+	background-color: #282828 !important;
+	border-color:     #434343 !important;
+}
+
+.pager > li.disabled > a,
+.pager > li.disabled > a:hover,
+.pagination > li.disabled > a,
+.pagination > li.disabled > a:hover
+{
+	color:	#4a4a4a !important;
+}
