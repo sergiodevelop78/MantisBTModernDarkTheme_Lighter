@@ -90,7 +90,7 @@ html
 
 .btn.btn-white, .btn-primary, .btn.btn-white.btn-primary
 {
-	background-color: #22252a !important;
+	background-color: #5b626f !important;
 	border:           0 transparent !important;
 	color:            #fafafa !important;
 	padding:          3px 12px !important;
@@ -98,14 +98,12 @@ html
 
 .btn.btn-white.active,
 .btn-primary.active,
-.btn.btn-white.btn-primary.active
+.btn.btn-white.btn-primary.active,
+.btn.btn-white:hover,
+.btn-primary:hover,
+.btn.btn-white.btn-primary:hover
 {
-	background-color: #1f2226 !important;
-}
-
-.btn.btn-white:hover, .btn-primary:hover, .btn.btn-white.btn-primary:hover
-{
-	background-color: #1f2226 !important;
+	background-color: #32363c !important;
 }
 
 .btn-primary.no-hover:active, .btn-primary.no-hover:hover
