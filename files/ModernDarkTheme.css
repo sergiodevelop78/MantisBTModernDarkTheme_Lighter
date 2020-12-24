@@ -727,3 +727,18 @@ code {
     color: rgb(221, 73, 110);
     background-color: rgb(43, 20, 26);
 }
+
+.status-10-fg { color: #e57373; }
+.status-10-bg { background-color: #e57373; }
+.status-20-fg { color: #ba68c8; }
+.status-20-bg { background-color: #ba68c8; }
+.status-30-fg { color: #ffb74d; }
+.status-30-bg { background-color: #ffb74d; }
+.status-40-fg { color: #fff176; }
+.status-40-bg { background-color: #fff176; }
+.status-50-fg { color: #64b5f6; }
+.status-50-bg { background-color: #64b5f6; }
+.status-80-fg { color: #4db6ac; }
+.status-80-bg { background-color: #4db6ac; }
+.status-90-fg { color: #e8e8e8; }
+.status-90-bg { background-color: #e8e8e8; }
