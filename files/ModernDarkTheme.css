@@ -722,3 +722,8 @@ a i {
     background-color: orange !important;
     text-shadow: 0 0 10px brown !important;
 }
+
+code {
+    color: rgb(221, 73, 110);
+    background-color: rgb(43, 20, 26);
+}
