@@ -421,7 +421,8 @@ select {
 }
 
 .skin-3 .sidebar.menu-min .nav-list > li > a > .menu-text {
-  border-color: #505050 !important;
+  border-color: #3c3c3c !important;
+  background-color: #2d3035 !important;
 }
 .sidebar.menu-min.compact .nav-list > li > a {
   line-height: 19px;
