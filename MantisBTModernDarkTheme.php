@@ -3,7 +3,7 @@
 class MantisBTModernDarkThemePlugin
 extends MantisPlugin
 {
-	const CFG_ENABLED = 'plugin_MantisBTModernDarkTheme_enabled';
+	const CFG_ENABLED = 'plugin_MantisBTModernDarkTheme_Lighter_enabled';
 
 	function register()
 	{

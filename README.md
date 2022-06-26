@@ -12,6 +12,10 @@ Edited from https://github.com/polnetwork/MantisBTModernTheme
 
 Edited from https://github.com/wiz78/MantisBTModernDarkTheme
 
+2022-06-25
+Edited from https://github.com/alex3rq/MantisBTModernDarkTheme
+
+
 ## Installation
 
 Upload the whole folder into your `plugins/` folder in the mantis installation so that you e.g. have `MANTIS_INSTALLATION/plugins/MantisBTModernDarkTheme/MantisBTModernDarkTheme.php`. After that the plugin should show up on the `manage_plugin_page.php` page in the mantis settings. There you can simply install it to activate it.
